@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Modul Mikrokontroler</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo-blpt">
+      <img src="png/logo-DIY-1.png" alt="Logo" class="logo">
+      <div class="logo-text-group">
+      <span class="logo-text">Balai Latihan Pendidikan Teknik</span>
+      <span class="logo-text1">Daerah Istimewa Yogyakarta</span>
+    </div>
+    </div>
+    <nav>
+      <button class="login-btn" onclick="scrollToFrame(0)">Home</button>
+      <button class="login-btn" onclick="scrollToFrame(1)">Materi</button>
+      <button class="login-btn" onclick="scrollToFrame(2)">Jobsheet</button>
+      <button class="login-btn" onclick="scrollToFrame(3)">Profil</button>
+    </nav>
+  </header>
+
+  <div class="frame-wrapper">
+    <div class="frames" id="frames">
+      <div class="frame frame-home" id="frame-home">
+        <main>
+          <div class="main-text">
+            <h1 class="explore">Microcontroller</h1>
+            <h2>Kecil Ukurannya, Besar Dampaknya!</h2>
+            <p>Pernah terpikir bagaimana lampu bisa menyala otomatis? Atau bagaimana mesin bisa “tahu” harus bergerak?
+                Jawabannya: mikrokontroler.</p>
+              <p>E-modul ini mengajakmu menyelami dunia mikrokontroler dengan cara yang menyenangkan dan aplikatif.</p>
+              <button class="contact-btn" onclick="scrollToFrame(3)" >Contact Me</button>
+          </div>
+          <img src="png/Yusui.png" alt="plant" class="plant">
+        </main>
+      </div>
+
+      <div class="frame frame-materi" id="frame-materi">
+        <section class="materi-section">
+          <h2 class="materi-title">Materi</h2>
+          <div class="materi-container">
+            <div class="materi-card" onclick="showSubFrame('blynk')">
+              <img src="png/arduino.png" alt="Blynk" class="materi-img">
+              <h3 class="materi-sub">Arduino</h3>
+              <div class="materi-desc">Platform mikrokontroler open-source yang mudah diprogram dan cocok untuk proyek elektronika dan otomasi berbasis sensor.</div>
+            </div>
+            <div class="materi-card" onclick="showSubFrame('mqtt')">
+              <img src="png/esp.png" alt="MQTT" class="materi-img">
+              <h3 class="materi-sub">ESP</h3>
+              <div class="materi-desc">Mikrokontroler dengan konektivitas Wi-Fi/Bluetooth terintegrasi, ideal untuk proyek nirkabel dengan efisiensi daya tinggi.</div>
+            </div>
+            <div class="materi-card" onclick="showSubFrame('thingspeak')">
+              <img src="png/raspberry.png" alt="ThingSpeak" class="materi-img">
+              <h3 class="materi-sub">Raspberry Pi</h3>
+              <div class="materi-desc">Komputer mini serbaguna yang mendukung berbagai bahasa pemrograman dan dapat digunakan untuk pengendalian sistem berbasis Linux.</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="frame frame-jobsheet" id="frame-jobsheet">
+        <section class="jobsheet-section">
+          <h2 class="jobsheet-title">Jobsheet</h2>
+          <div class="jobsheet-container">
+            <div class="jobsheet-card"onclick="showSubFrame('jobsheet-blynk')">
+              <img src="png/arduino.png" alt="Jobsheet 1" class="jobsheet-img">
+              <h3 class="jobsheet-sub">Arduino</h3>
+              <div class="jobsheet-desc">Jobsheet langkah-demi-langkah untuk memprogram dan mengontrol perangkat menggunakan Arduino IDE, mulai dari dasar hingga pengendalian sensor.</div>
+            </div>
+            <div class="jobsheet-card" onclick="showSubFrame('jobsheet-mqtt')">
+              <img src="png/esp.png" alt="Jobsheet 2" class="jobsheet-img">
+              <h3 class="jobsheet-sub">ESP</h3>
+              <div class="jobsheet-desc">Panduan praktikum mengirim dan menerima data menggunakan ESP32 melalui protokol komunikasi serial atau MQTT dengan efisiensi tinggi.</div>
+            </div>
+            <div class="jobsheet-card"onclick="showSubFrame('jobsheet-thingspeak')">
+              <img src="png/raspberry.png" alt="Jobsheet 3" class="jobsheet-img">
+              <h3 class="jobsheet-sub">Raspberry Pi</h3>
+              <div class="jobsheet-desc">Latihan pemrograman dasar dan integrasi sensor dengan Raspberry Pi, dilengkapi visualisasi data secara langsung melalui Python dan antarmuka web.</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="frame frame-profil" id="frame-profil">
+      <section class="profil-section">
+        <div class="profil-header">
+          <h2>Profile</h2>
+          <p>I’m a 3D design enthusiast</p>
+        </div>
+
+        <div class="profil-content">
+          <!-- Bagian kiri: Detail -->
+          <div class="profil-details">
+            <h3>Details</h3>
+            <p><strong>Name:</strong> Yusuf Purnomo</p>
+            <p><strong>Age:</strong> 22 years</p>
+            <p><strong>Location:</strong> Jakarta, Indonesia</p>
+            <div class="social-icons">
+              <a href="https://m.facebook.com/yusuf.851127/"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/yubi.2319?igsh=MXFraHpqaWlxbjF4ZA=="><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <!-- Bagian tengah: Tentang Saya -->
+          <div class="profil-about">
+            <h3>About me</h3>
+            <p>
+              Mahasiswa yang fokus pada pengembangan sistem mikrokontroler dan perancangan modul pelatihan. Tertarik juga pada desain 3D untuk mendukung visualisasi teknologi.
+            </p>
+            <p>
+              Aktif dalam proyek pengembangan e-modul dan pengajaran digital berbasis cloud, serta tertarik dengan desain 3D.
+            </p>
+          </div>
+                        <!-- Bagian kanan: Kartu foto -->
+              <div class="profil-card">
+                <div class="profil-card-photo">
+                  <img src="png/suf.png" alt="Foto Profil" class="profil-photo">
+                </div>
+                <div class="profil-card-body">
+                  <h4>HELLO, I'M Yusuf Purnomo</h4>
+                  <p>Saya adalah pengembang e-modul yang siap berkolaborasi dalam proyek pengajaran dan teknologi.</p>
+                  <div class="social-icons white">
+                    <a href="https://m.facebook.com/yusuf.851127/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </section>
+      </div>
+    </div>
+      <div class="subframe" id="subframe-blynk">
+        <div class="subframe-header">Arduino</div>
+        <div class="subframe-body">
+            <iframe src="pdf/materi_blynk.pdf"></iframe>
+            </div>
+          <button  onclick="closeSubFrames()">Kembali</button>
+        </div>
+
+        <div class="subframe" id="subframe-mqtt">
+          <div class="subframe-header">ESP</div>
+          <div class="subframe-body">
+            <iframe src="pdf/materi_mqtt.pdf"></iframe>
+            </div>
+          <button onclick="closeSubFrames()">Kembali</button>
+        </div>
+
+        <div class="subframe" id="subframe-thingspeak">
+          <div class="subframe-header">Raspberry Pi</div>
+          <div class="subframe-body">
+            <iframe src="pdf/materi_thingspeak.pdf"></iframe>
+            </div>
+          <button onclick="closeSubFrames()">Kembali</button>
+        </div>
+
+      <div class="subframe" id="subframe-jobsheet-blynk">
+        <div class="subframe-header">Jobsheet Arduino</div>
+        <div class="subframe-body">
+          <iframe src="pdf/jobsheet_blynk.pdf"></iframe>
+        </div>
+        <button onclick="closeSubFrames()">Kembali</button>
+      </div>
+      <div class="subframe" id="subframe-jobsheet-mqtt">
+        <div class="subframe-header">Jobsheet ESP</div>
+        <div class="subframe-body">
+          <iframe src="pdf/jobsheet_mqtt.pdf"></iframe>
+        </div>
+        <button onclick="closeSubFrames()">Kembali</button>
+      </div>
+        <div class="subframe" id="subframe-jobsheet-thingspeak">
+          <div class="subframe-header">Jobsheet Raspberry Pi</div>
+          <div class="subframe-body">
+            <iframe src="pdf/jobsheet_thingspeak.pdf"></iframe>
+          </div>
+          <button onclick="closeSubFrames()">Kembali</button>
+        </div>
+  </div>
+</body>
+</html>
